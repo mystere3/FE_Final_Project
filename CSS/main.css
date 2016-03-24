@@ -1,0 +1,199 @@
+body {
+  background-color: #ADDFF0;
+  margin: 0;
+  margin-top: 25px;
+}
+
+nav {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  top: 0;
+  left: 0;
+  /*padding: 20px;*/
+  text-align: center;
+  z-index: 1;
+}
+
+#menu-button {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+nav ul {
+  padding: 0;
+}
+
+/* Nav Items*/
+nav > ul > li {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 18pt;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+/* submenu */
+nav ul ul {
+  display: none;
+  position: fixed;
+  background: white;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+/* Submenu Items */
+nav ul ul li {
+  display: block;
+  padding: 10px;
+  vertical-align: top;
+}
+
+h1 {
+  font-family: sans-serif;
+  font-weight: normal;
+  color: #FFFFFF;
+  /*background-color: #1F6278;*/
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+section {
+  margin-top: -25px;
+  padding-top: 25px;
+
+}
+.current {
+  text-decoration: underline;
+}
+
+#menu-button {
+  font-size: 24pt;
+}
+
+@media (max-width: 768px) {
+  /* Nav Menu*/
+  body {
+    margin-top: 0px;
+  }
+
+  nav > ul > li {
+    display: block;
+  }
+  #menu-button {
+    display: block;
+    height: 60px;
+    width: 60px;
+  }
+  nav ul {
+    display: none;
+  }
+  /* Submenu */
+  nav ul ul {
+    position: static;
+  }
+/*Submenu Items*/
+  nav ul ul li {
+    padding: 0;
+    font-size: .8em;
+    display: none;
+  }
+  section {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+}
+
+#home {
+  /*color: white;*/
+  /*min-height: 600px;*/
+  position: relative;
+  padding: 0px;
+  
+}
+
+.container-fluid {
+  padding: 0px;
+}
+
+#moon {
+  z-index: -2;
+}
+
+.home-bg1 {
+  position: absolute;
+  background-image: url(../images/skyline_Resize2.png);
+  background-size: 100%;
+  height: 100%;
+  width: 100%;
+  min-width: 450px;
+  z-index: -1;
+}
+
+.home-bg2 {
+  position: absolute;
+  margin: 10px;
+  margin-top: 0px;
+  background: url(../images/angryFace.png) no-repeat /*right 50px top 50px*/;
+  background-size: 15%;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+
+}
+
+.home-content {
+  position: absolute;
+  padding: 10px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.stickers {
+  height: 200px;
+  width: 100%;
+  background-image: url(../images/StickerSheet-1.png);
+  /*background-size: 100%;*/
+}
+
+#about {
+  position: relative;
+  padding: 0px;
+  padding-top: 25px;
+  /*min-height: 400px;*/
+}
+
+.about-bg1 {
+  position: absolute;
+  background-image: url(../images/theScowl.JPG);
+  background-size: 100%;
+  height: 100%;
+  width: 100%;
+  min-width: 450px;
+  /*min-height: 400px;*/
+  z-index: -1;
+  opacity: 0.75;
+}
+
+.about-content {
+  color: black;
+  position: absolute;
+  padding-bottom: 25px;
+}
+
+#about-h1 {
+  color: black;
+}
+
+.dividers {
+  position: relative;
+}
