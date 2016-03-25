@@ -11,7 +11,7 @@ nav {
   top: 0;
   left: 0;
   /*padding: 20px;*/
-  text-align: center;
+  /*text-align: center;*/
   z-index: 1;
 }
 
@@ -197,3 +197,54 @@ section {
 .dividers {
   position: relative;
 }
+
+.menu-colors {
+  height: 5vh;
+  width: 20px;
+  display: inline-block;
+  margin-right: -6.75px;
+}
+
+#menuC {
+  background-color: cyan;
+}
+
+#menuM {
+  background-color: magenta;
+}
+
+#menuY {
+  background-color: yellow;
+}
+#menuR {
+  background-color: red;
+  width: 7px;
+}
+
+#menuG {
+  background-color: green;
+  width: 7px;
+}
+
+#menuB {
+  background-color: blue;
+  width: 7px;
+}
+#menuK {
+background-color: black;
+}
+
+.section-colors {
+  height: 10vh;
+  width: 40px;
+  display: inline-block;
+
+}
+#sectionC {
+  background-color: cyan;
+}
+
+
+
+
+
