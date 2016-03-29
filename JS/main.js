@@ -1,5 +1,6 @@
 var printImageArray = ["2-1-13_311.jpg", "2-1-13_316.jpg", "4-11-13_106.jpg"];
 var printLabelArray = ["Silent Night 2014 - Room", "Silent Night 2014 - Room", "Onglyza Pullout"];
+var displayedImage;
 
 $(function() {
   sectionBlockHandler();
@@ -46,16 +47,21 @@ $(function() {
 
   $(".image-link").click(function(e) {
     e.preventDefault();
-    var imageN = parseInt($(this).data('image'));
-    var image = "images/comps/" + printImageArray[imageN]; 
-    var label = printLabelArray[imageN];
+    displayedImage = parseInt($(this).data('image'));
+
+    
     // alert(data);
     $(".modal-wrapper").show();
     $(".modal").show();
     $("#open-modal-button").hide();
-    // $("body").css('overflow', 'hidden');
-    $("#lightbox-image").attr('src', image);
-    $("#lightbox-label").html(label);
+
+    // var image = "images/comps/" + printImageArray[displayedImage]; 
+    // var label = printLabelArray[displayedImage];
+    // $("#lightbox-image").attr('src', image);
+    // $("#lightbox-label").html(label);
+
+    displayImage(displayedImage);
+
     $('body').addClass('no-scroll');
   })
 
@@ -72,10 +78,31 @@ $(function() {
     // $("body").css('overflow', 'auto');
   })
 
+  $('#prev-modal-button').click(function() {
+    if (displayedImage > 0) {
+      displayedImage = (displayedImage - 1) % printImageArray.length;
+    } else {
+      displayedImage = printImageArray.length - 1;
+    }
+    
+    displayImage(displayedImage);
+  })
+
+  $('#next-modal-button').click(function() {
+    displayedImage = (displayedImage + 1) % printImageArray.length;
+    displayImage(displayedImage);
+  })
+
   $(".modal").click(function(event) {
     event.stopPropagation();
   })
 
+function displayImage(imageNumber) {
+  var image = "images/comps/" + printImageArray[imageNumber]; 
+  var label = printLabelArray[imageNumber];
+  $("#lightbox-image").attr('src', image);
+  $("#lightbox-label").html(label);
+}
   // $('#fixedC').click(function() {
   //   console.log("we got here");
   //   window.location('http://google.com');
