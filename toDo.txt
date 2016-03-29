@@ -1,3 +1,6 @@
 make boxes scroll to their sections
 
 thumbnail / lightboxes
+
+blue welcome link
+

@@ -1,3 +1,6 @@
+var printImageArray = ["2-1-13_311.jpg", "2-1-13_316.jpg", "4-11-13_106.jpg"];
+var printLabelArray = ["Silent Night 2014 - Room", "Silent Night 2014 - Room", "Onglyza Pullout"];
+
 $(function() {
   sectionBlockHandler();
 
@@ -20,14 +23,6 @@ $(function() {
 
   $(window).scroll(sectionBlockHandler)
 
-// functions matching section heights to content height
-
-  // var homeHeight = $('.home-content').css('height');
-  // $('#home').css('height', homeHeight);
-
-  // var aboutHeight = $('.about-content').css('height');
-  // $('#about').css('height', aboutHeight);
-
 
 
   $('#menu-button').click(toggleNav);
@@ -45,56 +40,56 @@ $(function() {
     }
     sectionBlockHandler();
 
-      // var homeHeight = $('.home-content').css('height');
-      //   $('#home').css('height', homeHeight);
-
-      //   var aboutHeight = $('.about-content').css('height');
-      //   $('#about').css('height', aboutHeight);
   }
 
   $(window).resize(windowResized);
 
-  // function toggleChildren(event) {
-  //   event.preventDefault();
-  //   $('nav ul ul li').slideToggle();
-  // }
+  $(".image-link").click(function(e) {
+    e.preventDefault();
+    var imageN = parseInt($(this).data('image'));
+    var image = "images/comps/" + printImageArray[imageN]; 
+    var label = printLabelArray[imageN];
+    // alert(data);
+    $(".modal-wrapper").show();
+    $(".modal").show();
+    $("#open-modal-button").hide();
+    // $("body").css('overflow', 'hidden');
+    $("#lightbox-image").attr('src', image);
+    $("#lightbox-label").html(label);
+    $('body').addClass('no-scroll');
+  })
 
-  // $('#blog-link').click(toggleChildren);
-
-
-  // $(window).stellar({
-  //   horizontalScrolling: true,
-  //   verticalScrolling: true,
+  // $('.btn').click(function() {
+  //     var d = $(this).data('datac');      
+  //     alert(d);   
   // });
 
-  // $.stellar.positionProperty.moon = {
-  //   setTop: function($el, newTop, originalTop) {
-  //       $el.css({
-  //           'top': newTop,
-  //           'left': $el.hasClass('moon') ? originalTop - newTop : 0
-  //       });
-  //   },
-  //   setLeft: function($el, newLeft, originalLeft) {
-  //       $el.css('left', newLeft);
-  //   }
-  // };
+  $("#close-modal-button, .modal-wrapper").click(function(event) {
+    $(".modal-wrapper").hide();
+    $(".modal").hide();
+    $("#open-modal-button").show();
+    $('body').removeClass('no-scroll');
+    // $("body").css('overflow', 'auto');
+  })
 
-  // $('.moon').stellar({
-  //   scrollProperty: 'transform',
-  //   positionProperty: 'moon'
-  // });
+  $(".modal").click(function(event) {
+    event.stopPropagation();
+  })
 
-
+  // $('#fixedC').click(function() {
+  //   console.log("we got here");
+  //   window.location('http://google.com');
+  // })
 
 
 
 })
 
-function sectionBlockHandler() {
-  // var welcomeHeadTop = $('#home-head').offset().top;
-  // console.log(welcomeHeadTop - $(window).scrollTop());
 
-  // if ($(window).width() > 768) {
+
+
+function sectionBlockHandler() {
+  
     // CYAN BOXES
     if ($('#home-head').offset().top - $(window).scrollTop() < 55) {
       $('.windows').css('fill', '#00FFFF');
@@ -145,18 +140,7 @@ function sectionBlockHandler() {
     }
 
 
-  // } else {
-  //   $('#fixedC').css('opacity', '0');
-  //   $('#sectionC').css('opacity', '1');
-  //   $('#fixedM').css('opacity', '0');
-  //   $('#sectionM').css('opacity', '1');
-  //   $('#fixedRGB').css('opacity', '0');
-  //   $('#sectionRGB').css('opacity', '1');
-  //   $('#fixedY').css('opacity', '0');
-  //   $('#sectionY').css('opacity', '1');
-  //   $('#fixedK').css('opacity', '0');
-  //   $('#sectionK').css('opacity', '1');
-  // }
+  
 }
   
 
