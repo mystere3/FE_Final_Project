@@ -16,7 +16,7 @@ nav {
   left: 0;
   /*padding: 20px;*/
   text-align: center;
-  z-index: 1;
+  z-index: 2;
 }
 
 #menu-button {
@@ -242,29 +242,34 @@ background-color: black;
   top: 69px;
   left: 15px;
   background-color: cyan;
+  z-index: 1;
 }
 #fixedM {
   position: fixed;
   top: 99px;
   left: 15px;
   background-color: magenta;
+  z-index: 1;
 }
 #fixedRGB {
   position: fixed;
   top: 129px;
   left: 15px;
+  z-index: 1;
 }
 #fixedY {
   position: fixed;
   top: 159px;
   left: 15px;
   background-color: yellow;
+  z-index: 1;
 }
 #fixedK {
   position: fixed;
   top: 189px;
   left: 15px;
   background-color: black;
+  z-index: 1;
 }
 
 .section-heads {
@@ -305,11 +310,38 @@ svg {
   margin: auto;
   width: 70%;
   margin-bottom: 10px;
+  margin-top: 15px;
+  background-color: white;
+}
+
+.image-link {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+a.image-link:link {
+  text-decoration: none;
+  color: black;
+}
+a.image-link:visited {
+  text-decoration: none;
+  color: black;
+}
+a.image-link:active {
+  text-decoration: none;
+  color: black;
+}
+a.image-link:hover {
+  text-decoration: none;
+  color: black;
 }
 
 .single-image {
   text-align: center;
+}
 
+.single-link {
+  text-align: center;
 }
 
 .modal-wrapper {
@@ -322,6 +354,7 @@ svg {
 /*  padding: 0px;
   margin: 0px;*/
   display: none;
+  z-index: 3;
 }
 
 .modal {
@@ -337,13 +370,29 @@ svg {
   padding: 30px;
   display: none;
   text-align: center;
+  z-index: 4;
 }
 #close-modal-button {
   position: absolute;
-  top: -0px;
-  right: -0px;
+  top: 10px;
+  right: 10px;
   font-size: 15pt;
   font-weight: bold;
+  /*z-index: 1;*/
+}
+
+#next-modal-button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-20px);
+}
+
+#prev-modal-button {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-20px);
 }
 
 .no-scroll {
@@ -353,9 +402,18 @@ svg {
 #lightbox-image {
   display: block;
   margin: auto;
-  height: 90%;
+  height: 97%;
 }
 
+#lightbox-label {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
 
 
 
