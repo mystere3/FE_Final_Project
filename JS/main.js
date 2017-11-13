@@ -1,5 +1,33 @@
-var printImageArray = ["2-1-13_311.jpg", "2-1-13_316.jpg", "4-11-13_106.jpg", "4-11-13_107.jpg", "5-24-13_180.jpg", "5-24-13_183.jpg", "5-24-13_184.jpg", "5-24-13_185.jpg"];
-var printLabelArray = ["Silent Night 2014 - Room", "Silent Night 2014 - Room", "Onglyza Pullout", "Onglyza Pullout", "Happy Fuel Boards", "Happy Fuel Clingzy Wall", "Happy Fuel Face in a Hole Stand", "Happy Fuel Banners"];
+var printImageArray = ["2-1-13_311.jpg", 
+                        "2-1-13_316.jpg", 
+                        "12-14-14 049.JPG", 
+                        "12-14-14 056.JPG", 
+                        "024.jpg",
+                        "12-14-14_057.jpg",
+                        "4-11-13_106.jpg", 
+                        "4-11-13_107.jpg", 
+                        "5-24-13_180.jpg", 
+                        "5-24-13_183.jpg", 
+                        "5-24-13_184.jpg", 
+                        "5-24-13_185.jpg",
+                        "026.JPG",
+                        "057.jpg",
+                        "112.jpg"];
+var printLabelArray = ["Silent Night 2014 - Room", 
+                        "Silent Night 2014 - Room", 
+                        "Silent Night 2015 - 32 Old Slip", 
+                        "Silent Night 2015 - 1 World Trade", 
+                        "Silent Night 2015 - Room",
+                        "Flatiron Building",
+                        "Onglyza Pullout", 
+                        "Onglyza Pullout", 
+                        "Happy Fuel Boards", 
+                        "Happy Fuel Clingzy Wall", 
+                        "Happy Fuel Face in a Hole Stand", 
+                        "Happy Fuel Banners",
+                        "Branded Oversized Bathroom Keys",
+                        "Framed and Matted Client Gifts",
+                        "Little Bloc Book"];
 var displayedImage;
 
 
