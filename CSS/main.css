@@ -96,6 +96,7 @@ section {
 
 }
 .current {
+  font-weight: normal;
   /*text-decoration: underline;*/
 }
 
@@ -104,6 +105,39 @@ section {
 }
 
 @media (max-width: 768px) {
+  /* Nav Menu*/
+  body {
+    margin-top: 0px;
+  }
+
+  nav > ul > li {
+    display: block;
+  }
+  #menu-button {
+    display: block;
+    height: 60px;
+    width: 60px;
+  }
+  nav ul {
+    display: none;
+  }
+  /* Submenu */
+  nav ul ul {
+    position: static;
+  }
+/*Submenu Items*/
+  nav ul ul li {
+    padding: 0;
+    font-size: .8em;
+    display: none;
+  }
+  section {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+}
+
+@media (max-device-width: 768px) {
   /* Nav Menu*/
   body {
     margin-top: 0px;
