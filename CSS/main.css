@@ -328,10 +328,10 @@ svg {
   /*width: 100vw;*/
 }
 .windows {
-  fill: rgb(0,255,0);
+  fill: #80FFFF;
 }
 #skyline {
-  fill: rgb(200,200,200);
+  fill: rgb(225,225,225);
 }
 
 #image-section {
